@@ -1,6 +1,8 @@
 .projects-div{
     margin: 1.5rem;
     height: 90%;
+    display: grid;
+    grid-template-columns: 1fr 16fr;;
 }
 .add-project-btn{
     height: 4rem;
@@ -13,6 +15,8 @@
     font-size: 1.6rem;
     font-family: 'Fredoka One', cursive;
     transition: all 0.3s;
+
+    padding: 0px;
 }
 
 .add-project-btn:hover{
@@ -152,10 +156,9 @@
         height: 2rem;
         width: 2rem;
         font-size: 1rem;
-    }
-    .add-project-btn:hover{
-        background:transparent;
-        color:orange;
+        padding: 0px;
+        margin-left: auto;
+        margin-right: auto;
     }
     .project-entry-div{
         padding: 1em;
@@ -165,6 +168,9 @@
         width: 2rem;
         font-size: 1rem;
         color: orange;
+        padding: 0px;
+        margin-left: auto;
+        margin-right: auto;
     }
     .project-entry-title{
         font-size: 0.8rem;
@@ -180,8 +186,6 @@
 
         background-color: orange;
         color: lightgrey;
-
-        margin-right: 1em;
         width: 36%;
         font-size: 0.4rem;
     }
