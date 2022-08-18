@@ -4,26 +4,27 @@
     flex-direction: column;
     gap: 24px;
 
-    box-shadow:5px 0px 5px rgb(0, 0, 0, 0.1);
 
     align-items: center;
     padding-top: 15px;
-    z-index: 1;
+
 }
 .sidebar-btn{
-    border-radius: 50%;
     border:none;
     height: 80px;
-    width: 80px;
+    width: 100%;
+
+    border-bottom-left-radius: 9999px;
+    border-top-left-radius: 9999px;
+    
     background-position: center;
     background-repeat: no-repeat;
 
     transition: all 0.3s;
     background-color: transparent;
 }
-
-.sidebar-btn:hover{
-    transform: scale(1.2);
+.anim:hover{
+  transform: scale(1.1);
 }
 #projects-btn{
     background-image: url(../icons/projects/icons8-folder.svg);
@@ -47,8 +48,10 @@
         padding-top: 0;
     }
     .sidebar-btn{
-        border-radius: 50%;
-        height: 40px;
+        border-top-left-radius: 9999px;
+        border-top-right-radius: 9999px;
+        border-bottom-left-radius: 0;
+        height: 100%;
         width: 40px;
     }
     #projects-btn{

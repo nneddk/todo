@@ -1,0 +1,32 @@
+
+
+.projects-div{
+    margin: 15px;
+    height: 90%;
+}
+
+.add-project-btn{
+    height: 80px;
+    width: 80px;
+    
+    border-radius: 50%;
+    border:none;
+    background-color: lightgray;
+    color:black;
+    font-size: 40px;
+
+    transition: all 0.3s;
+}
+
+.add-project-btn:hover{
+    background-color: orange;
+    color:white;
+}
+
+@media only screen and (max-width: 700px) {
+    .add-project-btn{
+        height: 40px;
+        width: 40px;
+        font-size: 20px;
+    }
+  }
