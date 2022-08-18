@@ -2,16 +2,16 @@
     background-color: orange;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 3em;
 
 
     align-items: center;
-    padding-top: 15px;
+    padding-top: 1.5rem;
 
 }
 .sidebar-btn{
     border:none;
-    height: 80px;
+    height: 5em;
     width: 100%;
 
     border-bottom-left-radius: 9999px;
@@ -28,19 +28,22 @@
 }
 #projects-btn{
     background-image: url(../icons/projects/icons8-folder.svg);
+    background-size: 40%;
     
   }
 
 #checklist-btn{
     background-image: url(../icons/checklist/icons8-tick-box.svg);
+    background-size: 40%;
   }
 
 #notes-btn{
     background-image: url(../icons/notes/icons8-document.svg);
+    background-size: 40%;
   }
 
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 600px) {
     .sidebar {
         justify-content: center;
         align-items: center;
@@ -52,7 +55,7 @@
         border-top-right-radius: 9999px;
         border-bottom-left-radius: 0;
         height: 100%;
-        width: 40px;
+        width: 4rem;
     }
     #projects-btn{
         background-image: url(../icons/projects/icons8-folder-32.svg);

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto+Condensed:wght@700&display=swap');
-html, body{
+body{
     margin: 0;
+    font-size: 62.5%;
 }
 
 
@@ -13,8 +14,9 @@ html, body{
     background:black;
     color: lightgray;
 
-    padding-left: 20px;
-    font-size: 20px;
+    padding-left: 1em;
+
+    font-size: 1.6rem;
     z-index: 2;
 }
 .content{
@@ -36,8 +38,8 @@ html, body{
     background:black;
     color:lightgrey;
 
-    padding-left: 20px;
-    font-size: 10px;
+    padding-left: 1em;
+    font-size: 1rem;
     
 }
 #wrapper{
@@ -55,7 +57,8 @@ html, body{
     transition: all 0.3s;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 600px) {
+
     .content {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 10fr;

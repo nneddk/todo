@@ -1,23 +1,17 @@
-
-
 .projects-div{
-    margin: 15px;
+    margin: 1.5rem;
     height: 90%;
 }
-
-
-
 .add-project-btn{
-    height: 80px;
-    width: 80px;
+    height: 4rem;
+    width: 4rem;
     
     border-radius: 50%;
     border:none;
     background-color: lightgray;
     color:black;
-
+    font-size: 1.6rem;
     font-family: 'Fredoka One', cursive;
-    font-size: 32px;
     transition: all 0.3s;
 }
 
@@ -29,16 +23,16 @@
 .project-entry-div{
     width: 80vmin;
     height: 80vmin;
-    background-color: black;
+    background-color: darkslategray;
     display: grid;
     grid-template-columns: 10fr 1fr;
     grid-template-rows: 1fr 10fr 1fr;
 
-    padding: 24px;
+    padding: 1.6em;
     padding-right: 0;
 
-    row-gap: 12px;
-    border-radius: 25px;
+    row-gap: 1.2em;
+    border-radius: 2.5em;
 }
 
 .project-entry-title-span{
@@ -46,10 +40,10 @@
     justify-content: space-between;
     align-items: center;
 
-    padding-left: 24px;
+    padding-left: 1.6em;
     
     height: 100%;
-    margin: 8px;
+    margin: 1em;
 
     border-radius: 9999px;
 
@@ -64,12 +58,11 @@
     height: 95%;
     width: 95%;
 
-    font-size: 2vmin;
     outline: none;
     background: transparent;
 
     font-family: 'Fredoka One', cursive;
-    font-size: 32px;
+    font-size: 1rem;
     color:lightgrey;
 
     
@@ -79,13 +72,13 @@
 }
 .project-entry-close-btn{
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    line-height: 20px;
+    width: 4rem;
+    height: 4rem;
+
     background: transparent;
 
     font-family: 'Fredoka One', cursive;
-    font-size: 32px;
+    font-size: 1.6rem;
     color:lightgrey;
 
     align-self: center;
@@ -102,11 +95,11 @@
     display:flex;
     justify-content: space-between;
     align-items: center;    
-    padding-left: 24px;    
-    padding-right: 24px; 
+    padding-left: 1.6em;    
+    padding-right: 1.6em; 
         
     height: 100%;
-    margin: 8px;
+    margin: 1em;
 
     border-radius: 25px;
     background: rgb(255, 255, 255, 0.2);
@@ -120,12 +113,11 @@
     height: 95%;
     width: 95%;
 
-    font-size: 2vmin;
     outline: none;
     background: transparent;
 
     font-family: 'Fredoka One', cursive;
-    font-size: 32px;
+    font-size: 1rem;
     color:lightgrey;
 
     border:none;
@@ -133,7 +125,7 @@
 }
 
 .project-entry-add-btn{
-    width: 20%;
+    width: 36%;
     height: 90%;
 
 
@@ -147,7 +139,7 @@
     background: rgb(255, 255, 255, 0.2);
     color:lightgray;
 
-    font-size: 16px;
+    font-size: 1rem;
 
     transition: all 0.3s;
 }
@@ -157,29 +149,29 @@
     color: lightgrey;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 600px) {
     .add-project-btn{
-        height: 40px;
-        width: 40px;
-        font-size: 20px;
+        height: 2rem;
+        width: 2rem;
+        font-size: 1rem;
     }
     .project-entry-div{
-        padding: 8px;
+        padding: 1em;
     }
     .project-entry-close-btn{
-        height: 20px;
-        width: 20px;
-        font-size: 16px;
+        height: 1em;
+        width: 1em;
+        font-size: 1rem;
         color: orange;
     }
     .project-entry-title{
-        font-size: 14px;
+        font-size: 0.8rem;
     }
     .project-entry-description-span{
         border-radius: 10px;
     }
     .project-entry-description{
-        font-size: 14px;
+        font-size: 0.8rem;
         
     }
     .project-entry-add-btn{
@@ -187,8 +179,8 @@
         background-color: orange;
         color: lightgrey;
 
-        margin-right: 8px;
-        width: 30%;
-        font-size: 8px;
+        margin-right: 1em;
+        width: 36%;
+        font-size: 0.4rem;
     }
   }
