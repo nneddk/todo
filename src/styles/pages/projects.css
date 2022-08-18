@@ -31,7 +31,7 @@
     padding: 1.6em;
     padding-right: 0;
 
-    row-gap: 1.2em;
+    row-gap: 1.6em;
     border-radius: 2.5em;
 }
 
@@ -43,7 +43,6 @@
     padding-left: 1.6em;
     
     height: 100%;
-    margin: 1em;
 
     border-radius: 9999px;
 
@@ -81,8 +80,6 @@
     font-size: 1.6rem;
     color:lightgrey;
 
-    align-self: center;
-    justify-self: center;
 
     border:none;
     transition: all 0.3s;
@@ -99,7 +96,7 @@
     padding-right: 1.6em; 
         
     height: 100%;
-    margin: 1em;
+
 
     border-radius: 25px;
     background: rgb(255, 255, 255, 0.2);
@@ -159,8 +156,8 @@
         padding: 1em;
     }
     .project-entry-close-btn{
-        height: 1em;
-        width: 1em;
+        height: 2rem;
+        width: 2rem;
         font-size: 1rem;
         color: orange;
     }
