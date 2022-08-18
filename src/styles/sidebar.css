@@ -1,0 +1,67 @@
+.sidebar{
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    box-shadow:5px 0px 5px rgb(0, 0, 0, 0.1);
+
+    align-items: center;
+    padding-top: 15px;
+    z-index: 1;
+}
+.sidebar-btn{
+    border-radius: 50%;
+    border:none;
+    height: 80px;
+    width: 80px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transition: all 0.3s;
+    background-color: transparent;
+}
+
+.sidebar-btn:hover{
+    transform: scale(1.2);
+}
+#projects-btn{
+    background-image: url(../icons/projects/icons8-folder.svg);
+    
+  }
+
+#checklist-btn{
+    background-image: url(../icons/checklist/icons8-tick-box.svg);
+  }
+
+#notes-btn{
+    background-image: url(../icons/notes/icons8-document.svg);
+  }
+
+
+@media only screen and (max-width: 700px) {
+    .sidebar {
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        padding-top: 0;
+    }
+    .sidebar-btn{
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+    }
+    #projects-btn{
+        background-image: url(../icons/projects/icons8-folder-32.svg);
+      }
+    
+    #checklist-btn{
+        background-image: url(../icons/checklist/icons8-tick-box-32.svg);
+      }
+    
+    #notes-btn{
+        background-image: url(../icons/notes/icons8-document-32.svg);
+      }
+  }
+
+
