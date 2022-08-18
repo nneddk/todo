@@ -137,6 +137,7 @@
     color:lightgray;
 
     font-size: 1rem;
+    text-align: center;
 
     transition: all 0.3s;
 }
@@ -151,6 +152,11 @@
         height: 2rem;
         width: 2rem;
         font-size: 1rem;
+        color:orange;
+    }
+    .add-project-btn:hover{
+        background:transparent;
+        color:orange;
     }
     .project-entry-div{
         padding: 1em;
