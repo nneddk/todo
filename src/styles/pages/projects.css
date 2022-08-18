@@ -5,6 +5,8 @@
     height: 90%;
 }
 
+
+
 .add-project-btn{
     height: 80px;
     width: 80px;
@@ -13,14 +15,146 @@
     border:none;
     background-color: lightgray;
     color:black;
-    font-size: 40px;
 
+    font-family: 'Fredoka One', cursive;
+    font-size: 32px;
     transition: all 0.3s;
 }
 
 .add-project-btn:hover{
     background-color: orange;
-    color:white;
+    color:lightgrey;
+}
+
+.project-entry-div{
+    width: 80vmin;
+    height: 80vmin;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+    grid-template-rows: 1fr 10fr 1fr;
+
+    padding: 24px;
+    padding-right: 0;
+
+    row-gap: 12px;
+    border-radius: 25px;
+}
+
+.project-entry-title-span{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-left: 24px;
+    
+    height: 100%;
+    margin: 8px;
+
+    border-radius: 9999px;
+
+    background: rgb(255, 255, 255, 0.2);
+    transition: all 0.3s;
+}
+.project-entry-title-span:hover{
+    background: rgb(255, 255, 255, 0.5);
+}
+
+.project-entry-title{
+    height: 95%;
+    width: 95%;
+
+    font-size: 2vmin;
+    outline: none;
+    background: transparent;
+
+    font-family: 'Fredoka One', cursive;
+    font-size: 32px;
+    color:lightgrey;
+
+    
+
+    border:none;
+
+}
+.project-entry-close-btn{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 20px;
+    background: transparent;
+
+    font-family: 'Fredoka One', cursive;
+    font-size: 32px;
+    color:lightgrey;
+
+    align-self: center;
+    justify-self: center;
+
+    border:none;
+    transition: all 0.3s;
+}
+.project-entry-close-btn:hover{
+    color: orange;
+}
+
+.project-entry-description-span{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;    
+    padding-left: 24px;    
+    padding-right: 24px; 
+        
+    height: 100%;
+    margin: 8px;
+
+    border-radius: 25px;
+    background: rgb(255, 255, 255, 0.2);
+
+    transition: all 0.3s;
+}
+.project-entry-description-span:hover{
+    background: rgb(255, 255, 255, 0.5);
+}
+.project-entry-description{
+    height: 95%;
+    width: 95%;
+
+    font-size: 2vmin;
+    outline: none;
+    background: transparent;
+
+    font-family: 'Fredoka One', cursive;
+    font-size: 32px;
+    color:lightgrey;
+
+    border:none;
+    resize: none;
+}
+
+.project-entry-add-btn{
+    width: 20%;
+    height: 90%;
+
+
+    align-self: center;
+    justify-self: end;
+
+    border-radius: 9999px;
+    border: none;
+    
+    font-family: 'Fredoka One', cursive;
+    background: rgb(255, 255, 255, 0.2);
+    color:lightgray;
+
+    font-size: 16px;
+
+    transition: all 0.3s;
+}
+
+.project-entry-add-btn:hover{
+    background-color: orange;
+    color: lightgrey;
 }
 
 @media only screen and (max-width: 700px) {
@@ -28,5 +162,33 @@
         height: 40px;
         width: 40px;
         font-size: 20px;
+    }
+    .project-entry-div{
+        padding: 8px;
+    }
+    .project-entry-close-btn{
+        height: 20px;
+        width: 20px;
+        font-size: 16px;
+        color: orange;
+    }
+    .project-entry-title{
+        font-size: 14px;
+    }
+    .project-entry-description-span{
+        border-radius: 10px;
+    }
+    .project-entry-description{
+        font-size: 14px;
+        
+    }
+    .project-entry-add-btn{
+
+        background-color: orange;
+        color: lightgrey;
+
+        margin-right: 8px;
+        width: 30%;
+        font-size: 8px;
     }
   }
