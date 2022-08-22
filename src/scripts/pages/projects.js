@@ -1,12 +1,15 @@
 import '../../styles/pages/projects.css';
-
+let i = 0;
 let  projectArray = [];
-
 class projectForm{
-    constructor(title, description){
+    constructor(title, description, pinned){
         this.title = title;
         this.description = description;
+        this.pinned = pinned;
     }
+}
+for(let i = 0; i<20; i++){
+    i%2 == 0?projectArray.push(new projectForm('ogga', 'bogga')):projectArray.push(new projectForm('nuga', 'suga'));
 }
 
 export default function projects(){
@@ -16,14 +19,10 @@ export default function projects(){
 
     const projectsList = document.createElement('div');
     projectsList.classList.add('projects-list');
-    
-    const pinnedProjectsDiv = document.createElement('div');
-    pinnedProjectsDiv.classList.add('pinned-projects');
 
     const addedProjects = document.createElement('div');
     addedProjects.classList.add('added-projects');
 
-    projectsList.appendChild(pinnedProjectsDiv);
     projectsList.appendChild(addedProjects);
 
     const addProject = document.createElement('button');
@@ -35,20 +34,21 @@ export default function projects(){
         newProject();
     }
 
-    
-
     projects.appendChild(addProject);
     projects.appendChild(projectsList);
-
+    i = 0;
     let v = 0;
     projectArray.forEach(element => {
         addedProjects.appendChild(addProjectTab(element.title, v));
         v++;
     });
+
+    const currentPinned = document.querySelectorAll('.pinned');
     return projects;
+    
 
 }
-function newProject(){
+function newProject(index, title, desc){
     const projectWrapper = document.getElementById('wrapper');
     projectWrapper.style.zIndex = '1';
 
@@ -58,8 +58,10 @@ function newProject(){
     const projectEntryTitle = document.createElement('input');
     projectEntryTitle.setAttribute('type', 'text');
     projectEntryTitle.setAttribute('maxlength', '28');
-    projectEntryTitle.setAttribute('placeholder', 'Name your new project');
+    projectEntryTitle.setAttribute('placeholder', 'name your new project');
     projectEntryTitle.classList.add('project-entry-title');
+    !title?projectEntryTitle.value = '':projectEntryTitle.value = title;
+    
 
     const projectEntryTitleSpan = document.createElement('span');
     projectEntryTitleSpan.classList.add('project-entry-title-span');
@@ -82,8 +84,10 @@ function newProject(){
     projectEntryDescription.setAttribute('cols', '32');
     projectEntryDescription.setAttribute('maxlength', '310');
     
-    projectEntryDescription.setAttribute('placeholder', 'Project Description');
+
+    projectEntryDescription.setAttribute('placeholder', 'add a description');
     projectEntryDescription.classList.add('project-entry-description');
+    !desc?projectEntryDescription.value = '':projectEntryDescription.value = desc;
 
     const projectEntryDescriptionSpan = document.createElement('span');
     projectEntryDescriptionSpan.classList.add('project-entry-description-span');
@@ -92,25 +96,42 @@ function newProject(){
     projectEntry.appendChild(projectEntryDescriptionSpan);
     //empty space for formatting, ignore
     projectEntry.appendChild(document.createElement('div'));
+    if (index == null){
+        const projectEntryAddBtn = document.createElement('button');
+        projectEntryAddBtn.setAttribute('type', 'button');
+        projectEntryAddBtn.classList.add('project-entry-add-btn');
+        projectEntryAddBtn.textContent = 'add project';
 
-    const projectEntryAddBtn = document.createElement('button');
-    projectEntryAddBtn.setAttribute('type', 'button');
-    projectEntryAddBtn.classList.add('project-entry-add-btn');
-    projectEntryAddBtn.textContent = 'Add project';
+        projectEntryAddBtn.onclick = function(){
+            let currIndex =  projectArray.length;
+            const currProjects = document.querySelector('.added-projects');
+            const projectTitle = document.querySelector('.project-entry-title').value;
+            const projectDesc = document.querySelector('.project-entry-description').value;
+            projectArray.push(new projectForm(projectTitle, projectDesc));
+            currProjects.appendChild(addProjectTab(projectTitle, currIndex));     
 
-    projectEntryAddBtn.onclick = function(){
-        let index =  projectArray.length;
-        const currProjects = document.querySelector('.added-projects');
-        const projectTitle = document.querySelector('.project-entry-title').value;
-        const projectDesc = document.querySelector('.project-entry-description').value;
-        projectArray.push(new projectForm(projectTitle, projectDesc));
-        currProjects.appendChild(addProjectTab(projectTitle, index));     
-        console.log(projectArray);
+            projectWrapper.style.zIndex = '-1';
+        }
+        projectEntry.appendChild(projectEntryAddBtn);
+        
 
-        projectWrapper.style.zIndex = '-1';
+    }else{
+        const projectEntryEditBtn = document.createElement('button');
+        projectEntryEditBtn.setAttribute('type', 'button');
+        projectEntryEditBtn.classList.add('project-entry-add-btn');
+        projectEntryEditBtn.textContent = 'edit project';
+
+        projectEntryEditBtn.onclick = function(){
+            const currTab = document.querySelector('.project-tab-title');
+            currTab.textContent = document.querySelector('.project-entry-title').value;
+            projectArray[index].title = document.querySelector('.project-entry-title').value;
+            projectArray[index].description = document.querySelector('.project-entry-description').value;
+
+            projectWrapper.style.zIndex = '-1';
+        }
+        projectEntry.appendChild(projectEntryEditBtn);
     }
-
-    projectEntry.appendChild(projectEntryAddBtn);
+    
 
     while(projectWrapper.hasChildNodes()){
         projectWrapper.removeChild(projectWrapper.lastChild);
@@ -119,29 +140,53 @@ function newProject(){
 
     projectWrapper.appendChild(projectEntry);
 }
-let editIndex;
 
 function addProjectTab(name, index){
     const projectTab = document.createElement('div');
     projectTab.classList.add('project-tab');
-
-    projectTab.onclick = function(){
-        editIndex = index;
-        console.log(editIndex);
-        viewProject(index);
+    
+    if (projectArray[index].pinned){
+        projectTab.classList.add('pinned');
+        projectTab.style.top = (i)+'%';
+        i+=8;
     }
     const projectTabTitle = document.createElement('div');
     projectTabTitle.classList.add('project-tab-title');
     projectTabTitle.textContent = name;
+    projectTabTitle.onclick = function(){
+        viewProject(index);
+    }
+    const projectTabDelete = document.createElement('button');
+    projectTabDelete.setAttribute('id','button');
+    projectTabDelete.classList.add('project-tab-delete');
+    projectTabDelete.textContent = 'delete';
+    projectTabDelete.onclick = function(){
+        deleteProject(index);
+    }
+
+    const projectTabPin = document.createElement('button');
+    projectTabPin.setAttribute('type', 'button');
+    projectTabPin.classList.add('project-tab-pin');
+    projectTabPin.textContent = 'pin';
+    projectTabPin.onclick = function(){
+        pinProject(index);
+    }
 
     projectTab.appendChild(projectTabTitle);
-
+    projectTab.appendChild(projectTabDelete);
+    projectTab.appendChild(projectTabPin);
+    
+    
+    
     return projectTab;
 }
 
 
 
 function viewProject(index){
+    let title = projectArray[index].title;
+    let desc = projectArray[index].description;
+
     const projectWrapper = document.getElementById('wrapper');
     projectWrapper.style.zIndex = '1';
 
@@ -150,7 +195,7 @@ function viewProject(index){
 
     const viewProjectTitle = document.createElement('div');
     viewProjectTitle.classList.add('view-project-title');
-    viewProjectTitle.textContent = projectArray[index].title;
+    viewProjectTitle.textContent = title;
 
     const projectEntryCloseBtn = document.createElement('button');
     projectEntryCloseBtn.setAttribute('type', 'button');
@@ -160,8 +205,52 @@ function viewProject(index){
         projectWrapper.style.zIndex = '-1';
     }
 
+    const viewProjectDesc = document.createElement('div');
+    viewProjectDesc.classList.add('view-project-desc');
+    viewProjectDesc.textContent = desc;
+
+    const viewProjectButtonHolder = document.createElement('div');
+    viewProjectButtonHolder.classList.add('view-project-button-holder');
+    
+    const deleteProjectButton = document.createElement('button');
+    deleteProjectButton.setAttribute('type', 'button');
+    deleteProjectButton.classList.add('delete-project-button');
+    deleteProjectButton.textContent = 'delete';
+    deleteProjectButton.onclick = function(){
+        deleteProject(index);
+        projectWrapper.style.zIndex = '-1';
+    }
+
+    const editProjectButton = document.createElement('button');
+    editProjectButton.setAttribute('type', 'button');
+    editProjectButton.classList.add('edit-project-project');
+    editProjectButton.textContent = 'edit';
+    editProjectButton.onclick = function(){
+        editProject(index, title, desc);
+
+
+    }
+
+    const pinProjectButton = document.createElement('button');
+    pinProjectButton.setAttribute('type', 'button');
+    pinProjectButton.classList.add('pin-project-button');
+    pinProjectButton.textContent = 'pin'
+    pinProjectButton.onclick = function(){
+        pinProject(index);
+        projectWrapper.style.zIndex = '-1';
+        
+    }
+    viewProjectButtonHolder.appendChild(deleteProjectButton);
+    viewProjectButtonHolder.appendChild(editProjectButton);
+    viewProjectButtonHolder.appendChild(pinProjectButton);
+
+
+
     projectEntry.appendChild(viewProjectTitle);
     projectEntry.appendChild(projectEntryCloseBtn);
+    projectEntry.appendChild(viewProjectDesc);
+    projectEntry.appendChild(document.createElement('div'));
+    projectEntry.appendChild(viewProjectButtonHolder);
 
 
     while(projectWrapper.hasChildNodes()){
@@ -172,3 +261,48 @@ function viewProject(index){
 
 }
 
+function deleteProject(index){
+    const addedProjects = document.querySelector('.added-projects');
+    if(index!= null){
+        projectArray.splice(index, 1);
+
+        while(addedProjects.hasChildNodes()){
+            addedProjects.removeChild(addedProjects.lastChild);
+        }
+
+        let v = 0;
+        projectArray.forEach(element => {
+        addedProjects.appendChild(addProjectTab(element.title, v));
+        v++;
+        });
+    }
+
+}
+
+function editProject(index, title, desc){
+    newProject(index, title, desc);
+}
+let counter = 0;
+
+function pinProject(index){
+    const currentTabs = document.querySelectorAll('.project-tab');
+    if(!projectArray[index].pinned){
+        if(counter!=5){
+            projectArray[index].pinned = true;
+            currentTabs[index].classList.add('pinned');
+            counter++;
+        }
+        
+    }else{
+        projectArray[index].pinned = false;
+        currentTabs[index].classList.remove('pinned');
+        counter--;
+    }
+    
+    const currentPinned = document.querySelectorAll('.pinned');
+    currentPinned[0] != null? currentPinned[0].style.top ='0%': 0;
+    currentPinned[1] != null? currentPinned[1].style.top ='8%': 0;
+    currentPinned[2] != null? currentPinned[2].style.top ='16%': 0;        
+    currentPinned[3] != null? currentPinned[3].style.top ='24%': 0;
+    currentPinned[4] != null? currentPinned[4].style.top ='32%': 0;
+}

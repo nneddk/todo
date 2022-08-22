@@ -154,18 +154,33 @@
     color: black;
 }
 
-.projects-list{
-}
-
-.pinned-projects{
-    display:absolute;
-}
 
 .added-projects{
-    display:grid;
     height: 100%;
-    grid-template-rows: repeat(10, 1fr);
+    overflow: auto;
+    gap: 2px;
+
 }
+.project-tab{
+    width: 90%;
+    height: 8%;
+}
+.pinned{
+    position: sticky;
+    width: 50%;
+    bottom:0;
+}
+
+.project-tab-delete{
+    color:blue;
+    z-index: 1;
+}
+
+.project-tab-pin{
+    color:red;
+    z-index: 1;
+}
+
 
 @media only screen and (max-width: 600px) {
     .add-project-btn{
