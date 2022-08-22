@@ -1,6 +1,4 @@
-*{
-    border:solid;
-}
+
 .projects-div{
     margin: 1.5rem;
     height: 90%;
@@ -168,7 +166,7 @@
 .pinned{
     position: sticky;
     width: 50%;
-    bottom:0;
+    background-color: blue;
 }
 
 .project-tab-delete{

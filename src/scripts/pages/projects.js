@@ -37,6 +37,7 @@ export default function projects(){
     projects.appendChild(addProject);
     projects.appendChild(projectsList);
     i = 0;
+
     let v = 0;
     projectArray.forEach(element => {
         addedProjects.appendChild(addProjectTab(element.title, v));
@@ -300,9 +301,11 @@ function pinProject(index){
     }
     
     const currentPinned = document.querySelectorAll('.pinned');
-    currentPinned[0] != null? currentPinned[0].style.top ='0%': 0;
-    currentPinned[1] != null? currentPinned[1].style.top ='8%': 0;
-    currentPinned[2] != null? currentPinned[2].style.top ='16%': 0;        
-    currentPinned[3] != null? currentPinned[3].style.top ='24%': 0;
-    currentPinned[4] != null? currentPinned[4].style.top ='32%': 0;
+    currentPinned[0] != null? currentPinned[0].style.top = '0%': 0;
+    currentPinned[1] != null? currentPinned[1].style.top = '8%': 0;
+    currentPinned[2] != null? currentPinned[2].style.top = '16%': 0;        
+    currentPinned[3] != null? currentPinned[3].style.top = '24%': 0;
+    currentPinned[4] != null? currentPinned[4].style.top = '32%': 0;
+    //bottom set
+    
 }
