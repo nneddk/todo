@@ -1,3 +1,6 @@
+*{
+    border:solid;
+}
 .projects-div{
     margin: 1.5rem;
     height: 90%;
@@ -27,7 +30,7 @@
 .project-entry-div{
     width: 80vmin;
     height: 80vmin;
-    background-color: darkslategray;
+    background-image: linear-gradient(orange, purple);
     display: grid;
     grid-template-columns: 10fr 1fr;
     grid-template-rows: 1fr 10fr 1fr;
@@ -50,11 +53,11 @@
 
     border-radius: 9999px;
 
-    background: rgb(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.2);
     transition: all 0.3s;
 }
 .project-entry-title-span:hover{
-    background: rgb(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.5);
 }
 
 .project-entry-title{
@@ -66,7 +69,7 @@
 
     font-family: 'Fredoka One', cursive;
     font-size: 1rem;
-    color:lightgrey;
+    color:black;
 
     
 
@@ -82,14 +85,14 @@
 
     font-family: 'Fredoka One', cursive;
     font-size: 1.6rem;
-    color:lightgrey;
+    color:lightgray;
 
 
     border:none;
     transition: all 0.3s;
 }
 .project-entry-close-btn:hover{
-    color: orange;
+    color: black;
 }
 
 .project-entry-description-span{
@@ -103,12 +106,12 @@
 
 
     border-radius: 25px;
-    background: rgb(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.2);
 
     transition: all 0.3s;
 }
 .project-entry-description-span:hover{
-    background: rgb(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.5);
 }
 .project-entry-description{
     height: 95%;
@@ -119,7 +122,7 @@
 
     font-family: 'Fredoka One', cursive;
     font-size: 1rem;
-    color:lightgrey;
+    color:black;
 
     border:none;
     resize: none;
@@ -137,7 +140,7 @@
     border: none;
     
     font-family: 'Fredoka One', cursive;
-    background: rgb(255, 255, 255, 0.2);
+    background: orange;
     color:lightgray;
 
     font-size: 1rem;
@@ -146,9 +149,22 @@
     transition: all 0.3s;
 }
 
-.project-entry-add-btn:hover{
-    background-color: orange;
-    color: lightgrey;
+.project-entry-add-btn:hover {
+    background-color: lightgray;
+    color: black;
+}
+
+.projects-list{
+}
+
+.pinned-projects{
+    display:absolute;
+}
+
+.added-projects{
+    display:grid;
+    height: 100%;
+    grid-template-rows: repeat(10, 1fr);
 }
 
 @media only screen and (max-width: 600px) {
@@ -167,7 +183,7 @@
         height: 2rem;
         width: 2rem;
         font-size: 1rem;
-        color: orange;
+        color: lightgray;
         padding: 0px;
         margin-left: auto;
         margin-right: auto;
@@ -184,8 +200,9 @@
     }
     .project-entry-add-btn{
 
-        background-color: orange;
-        color: lightgrey;
+        background-color: lightgray;
+        color: black;
+        height: 90%;
         width: 36%;
         font-size: 0.4rem;
     }

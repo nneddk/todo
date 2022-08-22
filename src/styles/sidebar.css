@@ -1,5 +1,5 @@
 .sidebar{
-    background-color: orange;
+    background-image: linear-gradient(orange, purple);
     display: flex;
     flex-direction: column;
     gap: 3em;
@@ -45,6 +45,7 @@
 
 @media only screen and (max-width: 600px) {
     .sidebar {
+      background-image: linear-gradient(to right, orange, purple);
         justify-content: center;
         align-items: center;
         flex-direction: row;
