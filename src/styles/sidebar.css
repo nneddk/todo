@@ -11,7 +11,7 @@
 }
 .sidebar-btn{
     border:none;
-    height: 5em;
+    height: 3em;
     width: 100%;
 
     border-bottom-left-radius: 9999px;
@@ -23,35 +23,34 @@
     transition: all 0.3s;
     background-color: transparent;
 }
-.anim{
 
-}
 .anim:hover{
   transform: scale(1.1);
 }
 #projects-btn{
-    background-image: url(../icons/projects/projects-white-64.svg);
-    background-size: 40%;
+    background-image: url(../icons/projects/projects-black-64.svg);
+    background-size: 30%;
     
-  }
+}
+
 #projects-btn:hover{
-  background-image: url(../icons/projects/projects-black-64.svg);
+  background-image: url(../icons/projects/projects-white-64.svg);
 }
 
 #checklist-btn{
-    background-image: url(../icons/checklist/checklist-white-64.svg);
-    background-size: 40%;
+    background-image: url(../icons/checklist/checklist-black-64.svg);
+    background-size: 30%;
   }
 #checklist-btn:hover{
-  background-image: url(../icons/checklist/checklist-black-64.svg);
+  background-image: url(../icons/checklist/checklist-white-64.svg);
 }
 
 #notes-btn{
-    background-image: url(../icons/notes/notes-white-64.svg);
-    background-size: 40%;
+    background-image: url(../icons/notes/notes-black-64.svg);
+    background-size: 30%;
   }
 #notes-btn:hover{
-  background-image: url(../icons/notes/notes-black-64.svg);
+  background-image: url(../icons/notes/notes-white-64.svg);
 }
 
 
