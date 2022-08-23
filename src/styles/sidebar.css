@@ -23,24 +23,36 @@
     transition: all 0.3s;
     background-color: transparent;
 }
+.anim{
+
+}
 .anim:hover{
   transform: scale(1.1);
 }
 #projects-btn{
-    background-image: url(../icons/projects/icons8-folder.svg);
+    background-image: url(../icons/projects/projects-white-64.svg);
     background-size: 40%;
     
   }
+#projects-btn:hover{
+  background-image: url(../icons/projects/projects-black-64.svg);
+}
 
 #checklist-btn{
-    background-image: url(../icons/checklist/icons8-tick-box.svg);
+    background-image: url(../icons/checklist/checklist-white-64.svg);
     background-size: 40%;
   }
+#checklist-btn:hover{
+  background-image: url(../icons/checklist/checklist-black-64.svg);
+}
 
 #notes-btn{
-    background-image: url(../icons/notes/icons8-document.svg);
+    background-image: url(../icons/notes/notes-white-64.svg);
     background-size: 40%;
   }
+#notes-btn:hover{
+  background-image: url(../icons/notes/notes-black-64.svg);
+}
 
 
 @media only screen and (max-width: 600px) {
@@ -59,16 +71,16 @@
         width: 4rem;
     }
     #projects-btn{
-        background-image: url(../icons/projects/icons8-folder-32.svg);
-      }
+      background-size: 30%;
+    }
     
     #checklist-btn{
-        background-image: url(../icons/checklist/icons8-tick-box-32.svg);
-      }
+      background-size: 30%;
+    }
     
     #notes-btn{
-        background-image: url(../icons/notes/icons8-document-32.svg);
-      }
+      background-size: 30%;
+    }
   }
 
 

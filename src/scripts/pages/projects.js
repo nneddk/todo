@@ -20,11 +20,6 @@ export default function projects(){
     const projectsList = document.createElement('div');
     projectsList.classList.add('projects-list');
 
-    const addedProjects = document.createElement('div');
-    addedProjects.classList.add('added-projects');
-
-    projectsList.appendChild(addedProjects);
-
     const addProject = document.createElement('button');
     addProject.classList.add('add-project-btn')
     addProject.setAttribute('type', 'button');
@@ -40,7 +35,7 @@ export default function projects(){
 
     let v = 0;
     projectArray.forEach(element => {
-        addedProjects.appendChild(addProjectTab(element.title, v));
+        projectsList.appendChild(addProjectTab(element.title, v));
         v++;
     });
 
@@ -105,7 +100,7 @@ function newProject(index, title, desc){
 
         projectEntryAddBtn.onclick = function(){
             let currIndex =  projectArray.length;
-            const currProjects = document.querySelector('.added-projects');
+            const currProjects = document.querySelector('.projects-list');
             const projectTitle = document.querySelector('.project-entry-title').value;
             const projectDesc = document.querySelector('.project-entry-description').value;
             projectArray.push(new projectForm(projectTitle, projectDesc));
