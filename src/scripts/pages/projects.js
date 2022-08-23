@@ -53,7 +53,7 @@ function newProject(index, title, desc){
     
     const projectEntryTitle = document.createElement('input');
     projectEntryTitle.setAttribute('type', 'text');
-    projectEntryTitle.setAttribute('maxlength', '28');
+    projectEntryTitle.setAttribute('maxlength', '64');
     projectEntryTitle.setAttribute('placeholder', 'name your new project');
     projectEntryTitle.classList.add('project-entry-title');
     !title?projectEntryTitle.value = '':projectEntryTitle.value = title;
@@ -78,7 +78,6 @@ function newProject(index, title, desc){
     const projectEntryDescription = document.createElement('textarea');
     projectEntryDescription.setAttribute('rows', '10');
     projectEntryDescription.setAttribute('cols', '32');
-    projectEntryDescription.setAttribute('maxlength', '310');
     
 
     projectEntryDescription.setAttribute('placeholder', 'add a description');
@@ -185,7 +184,7 @@ function viewProject(index){
     projectWrapper.style.zIndex = '1';
 
     const projectEntry = document.createElement('div');
-    projectEntry.classList.add('project-entry-div');
+    projectEntry.classList.add('view-project-div');
 
     const viewProjectTitle = document.createElement('div');
     viewProjectTitle.classList.add('view-project-title');
@@ -209,7 +208,8 @@ function viewProject(index){
     const deleteProjectButton = document.createElement('button');
     deleteProjectButton.setAttribute('type', 'button');
     deleteProjectButton.classList.add('delete-project-button');
-    deleteProjectButton.textContent = 'delete';
+    deleteProjectButton.classList.add('view-project-btn');
+
     deleteProjectButton.onclick = function(){
         deleteProject(index);
         projectWrapper.style.zIndex = '-1';
@@ -218,7 +218,7 @@ function viewProject(index){
     const editProjectButton = document.createElement('button');
     editProjectButton.setAttribute('type', 'button');
     editProjectButton.classList.add('edit-project-project');
-    editProjectButton.textContent = 'edit';
+    editProjectButton.classList.add('view-project-btn');
     editProjectButton.onclick = function(){
         editProject(index, title, desc);
 
@@ -228,7 +228,7 @@ function viewProject(index){
     const pinProjectButton = document.createElement('button');
     pinProjectButton.setAttribute('type', 'button');
     pinProjectButton.classList.add('pin-project-button');
-    pinProjectButton.textContent = 'pin'
+    pinProjectButton.classList.add('view-project-btn');
     pinProjectButton.onclick = function(){
         pinProject(index);
         projectWrapper.style.zIndex = '-1';
@@ -295,10 +295,10 @@ function pinProject(index){
     
     const currentPinned = document.querySelectorAll('.pinned');
     currentPinned[0] != null? currentPinned[0].style.top = '0%': 0;
-    currentPinned[1] != null? currentPinned[1].style.top = '7%': 0;
-    currentPinned[2] != null? currentPinned[2].style.top = '14%': 0;        
-    currentPinned[3] != null? currentPinned[3].style.top = '21%': 0;
-    currentPinned[4] != null? currentPinned[4].style.top = '28%': 0;
+    currentPinned[1] != null? currentPinned[1].style.top = '8%': 0;
+    currentPinned[2] != null? currentPinned[2].style.top = '16%': 0;        
+    currentPinned[3] != null? currentPinned[3].style.top = '24%': 0;
+    currentPinned[4] != null? currentPinned[4].style.top = '32%': 0;
     
     
 }
