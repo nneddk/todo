@@ -2,16 +2,17 @@
     background-image: linear-gradient(orange, purple);
     display: flex;
     flex-direction: column;
-    gap: 3em;
+    
 
 
     align-items: center;
-    padding-top: 1.5rem;
+    padding-top: 1rem;
+    gap:1rem;
 
 }
 .sidebar-btn{
     border:none;
-    height: 3em;
+    height: 3rem;
     width: 100%;
 
     border-bottom-left-radius: 9999px;
@@ -25,35 +26,46 @@
 }
 
 .anim:hover{
-  transform: scale(1.1);
+    transform: scale(1.2);
 }
+
+.anim#projects-btn{
+    background-image: url(../icons/projects/projects-white-64.svg);
+}
+.anim#checklist-btn{
+    background-image: url(../icons/checklist/checklist-white-64.svg);
+}
+.anim#notes-btn{
+   background-image: url(../icons/notes/notes-white-64.svg);
+}
+
 #projects-btn{
     background-image: url(../icons/projects/projects-black-64.svg);
     background-size: 30%;
-    
 }
 
 #projects-btn:hover{
-  background-image: url(../icons/projects/projects-white-64.svg);
+    background-image: url(../icons/projects/projects-black-64.svg);
 }
 
 #checklist-btn{
     background-image: url(../icons/checklist/checklist-black-64.svg);
     background-size: 30%;
-  }
+}
+
 #checklist-btn:hover{
-  background-image: url(../icons/checklist/checklist-white-64.svg);
+    background-image: url(../icons/checklist/checklist-black-64.svg);
+    background-size: 30%;
 }
 
 #notes-btn{
     background-image: url(../icons/notes/notes-black-64.svg);
     background-size: 30%;
-  }
-#notes-btn:hover{
-  background-image: url(../icons/notes/notes-white-64.svg);
+
 }
-
-
+#notes-btn:hover{
+    background-image: url(../icons/notes/notes-black-64.svg);
+}
 @media only screen and (max-width: 600px) {
     .sidebar {
       background-image: linear-gradient(to right, orange, purple);

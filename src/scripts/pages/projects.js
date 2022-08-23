@@ -144,7 +144,7 @@ function addProjectTab(name, index){
     if (projectArray[index].pinned){
         projectTab.classList.add('pinned');
         projectTab.style.top = (i)+'%';
-        i+=8;
+        i+=7;
     }
     const projectTabTitle = document.createElement('div');
     projectTabTitle.classList.add('project-tab-title');
@@ -155,7 +155,6 @@ function addProjectTab(name, index){
     const projectTabDelete = document.createElement('button');
     projectTabDelete.setAttribute('id','button');
     projectTabDelete.classList.add('project-tab-delete');
-    projectTabDelete.textContent = 'delete';
     projectTabDelete.onclick = function(){
         deleteProject(index);
     }
@@ -163,7 +162,6 @@ function addProjectTab(name, index){
     const projectTabPin = document.createElement('button');
     projectTabPin.setAttribute('type', 'button');
     projectTabPin.classList.add('project-tab-pin');
-    projectTabPin.textContent = 'pin';
     projectTabPin.onclick = function(){
         pinProject(index);
     }
@@ -258,7 +256,7 @@ function viewProject(index){
 }
 
 function deleteProject(index){
-    const addedProjects = document.querySelector('.added-projects');
+    const addedProjects = document.querySelector('.projects-list');
     if(index!= null){
         projectArray.splice(index, 1);
 
@@ -297,10 +295,10 @@ function pinProject(index){
     
     const currentPinned = document.querySelectorAll('.pinned');
     currentPinned[0] != null? currentPinned[0].style.top = '0%': 0;
-    currentPinned[1] != null? currentPinned[1].style.top = '8%': 0;
-    currentPinned[2] != null? currentPinned[2].style.top = '16%': 0;        
-    currentPinned[3] != null? currentPinned[3].style.top = '24%': 0;
-    currentPinned[4] != null? currentPinned[4].style.top = '32%': 0;
-    //bottom set
+    currentPinned[1] != null? currentPinned[1].style.top = '7%': 0;
+    currentPinned[2] != null? currentPinned[2].style.top = '14%': 0;        
+    currentPinned[3] != null? currentPinned[3].style.top = '21%': 0;
+    currentPinned[4] != null? currentPinned[4].style.top = '28%': 0;
+    
     
 }
