@@ -168,7 +168,7 @@
     border-radius: 9999px;
 
     display: grid;
-    grid-template-columns: 8fr 0.5fr 0.5fr;
+    grid-template-columns: 10fr 1fr 1fr;
     margin-bottom: 10px;
     transition: all 0.3s;
 

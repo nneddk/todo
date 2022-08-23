@@ -266,6 +266,7 @@ function deleteProject(index){
     const addedProjects = document.querySelector('.projects-list');
     if(index!= null){
         projectArray.splice(index, 1);
+        localStorage.setItem('data',JSON.stringify(projectArray));
 
         while(addedProjects.hasChildNodes()){
             addedProjects.removeChild(addedProjects.lastChild);
@@ -282,6 +283,7 @@ function deleteProject(index){
 
 function editProject(index, title, desc){
     newProject(index, title, desc);
+    localStorage.setItem('data',JSON.stringify(projectArray));
 }
 let counter = 0;
 
@@ -289,17 +291,16 @@ function pinProject(index){
     const currentTabs = document.querySelectorAll('.project-tab');
     if(!projectArray[index].pinned){
         if(counter!=5){
-            projectArray[index].pinned = true;
+            projectArray[index].pinned = true;  
             currentTabs[index].classList.add('pinned');
             counter++;
         }
-        
     }else{
         projectArray[index].pinned = false;
         currentTabs[index].classList.remove('pinned');
         counter--;
     }
-    
+    localStorage.setItem('data',JSON.stringify(projectArray));
     const currentPinned = document.querySelectorAll('.pinned');
     currentPinned[0] != null? currentPinned[0].style.top = '0%': 0;
     currentPinned[1] != null? currentPinned[1].style.top = '8%': 0;
