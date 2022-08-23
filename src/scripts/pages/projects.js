@@ -8,10 +8,13 @@ class projectForm{
         this.pinned = pinned;
     }
 }
+
+
+/* debug purposes, to fill arrays 
 for(let i = 0; i<20; i++){
     i%2 == 0?projectArray.push(new projectForm('ogga', 'bogga')):projectArray.push(new projectForm('nuga', 'suga'));
 }
-
+*/
 export default function projects(){
     const projects = document.createElement('div');
     projects.classList.add('projects-div');
@@ -34,10 +37,13 @@ export default function projects(){
     i = 0;
 
     let v = 0;
+    projectArray = JSON.parse(localStorage.getItem("data") || "[]");
     projectArray.forEach(element => {
         projectsList.appendChild(addProjectTab(element.title, v));
         v++;
     });
+    
+    
 
     const currentPinned = document.querySelectorAll('.pinned');
     return projects;
@@ -103,6 +109,7 @@ function newProject(index, title, desc){
             const projectTitle = document.querySelector('.project-entry-title').value;
             const projectDesc = document.querySelector('.project-entry-description').value;
             projectArray.push(new projectForm(projectTitle, projectDesc));
+            localStorage.setItem('data',JSON.stringify(projectArray));
             currProjects.appendChild(addProjectTab(projectTitle, currIndex));     
 
             projectWrapper.style.zIndex = '-1';
@@ -143,7 +150,7 @@ function addProjectTab(name, index){
     if (projectArray[index].pinned){
         projectTab.classList.add('pinned');
         projectTab.style.top = (i)+'%';
-        i+=7;
+        i+=8;
     }
     const projectTabTitle = document.createElement('div');
     projectTabTitle.classList.add('project-tab-title');
