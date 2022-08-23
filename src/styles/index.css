@@ -19,6 +19,12 @@ body{
     font-size: 1.6rem;
     z-index: 2;
 }
+.to{
+    color:orange;
+}
+.do{
+    color:purple;
+}
 .content{
     background: lightgrey;
     height: 92vh;

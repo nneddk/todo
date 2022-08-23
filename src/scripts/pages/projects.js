@@ -16,6 +16,7 @@ for(let i = 0; i<20; i++){
 }
 */
 export default function projects(){
+
     const projects = document.createElement('div');
     projects.classList.add('projects-div');
 
@@ -31,7 +32,6 @@ export default function projects(){
     addProject.onclick = function(){
         newProject();
     }
-
     projects.appendChild(addProject);
     projects.appendChild(projectsList);
     i = 0;
@@ -51,6 +51,7 @@ export default function projects(){
 
 }
 function newProject(index, title, desc){
+    
     const projectWrapper = document.getElementById('wrapper');
     projectWrapper.style.zIndex = '1';
 

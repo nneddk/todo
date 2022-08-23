@@ -1,14 +1,24 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-entry: {
-        index: './src/scripts/index.js',
+  entry: {
+    index: './src/scripts/index.js',
+  },
+  plugins: [
+   new HtmlWebpackPlugin({
+      meta: {
+        'viewport':{name: 'viewport', content: 'width=device-width, initial-scale=1.0'},
       },
-output: {
+      title: 'todo',
+   }),
+  ],
+  output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    clean: true
   },
-module: {
+  module: {
     rules: [
         {
         test: /\.css$/i,
@@ -21,3 +31,4 @@ module: {
     ],
   },
 };
+

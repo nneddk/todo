@@ -58,7 +58,7 @@
     
 }
 .project-entry-title-span:hover{
-    background: rgba(0, 0 , 0, 0.5);
+    background: rgba(0, 0 , 0, 0.3);
 }
 
 .project-entry-title{
@@ -111,7 +111,7 @@
     transition: all 0.3s;
 }
 .project-entry-description-span:hover{
-    background: rgba(0, 0 , 0, 0.5);
+    background: rgba(0, 0 , 0, 0.3);
 }
 .project-entry-description{
     height: 95%;
@@ -133,8 +133,8 @@
 }
 
 .project-entry-add-btn{
-    width: 36%;
-    height: 80%;
+    width: 30%;
+    height: 4rem;
 
 
     align-self: center;
@@ -210,7 +210,7 @@
     display:flex;
     align-items: center;
     padding-left: 2em;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-family: 'Fredoka One', cursive;
     color: black;
 
@@ -226,15 +226,17 @@
     border:none;
     align-self: center;
     transition: all 0.3s;
+    background-size: 60%;
 }
 .project-tab-delete{
-    background-image: url(../../icons/delete/delete-black-16.svg);  
+    background-image: url(../../icons/delete/delete-black-32.svg);
+
 }
 .project-tab-delete:hover{
     transform: scale(1.1);  
 }
 .project-tab-pin{
-    background-image: url(../../icons/pin/pin-black-16.svg);
+    background-image: url(../../icons/pin/pin-black-32.svg);
 
 }
 .project-tab-pin:hover{
@@ -273,12 +275,12 @@
     align-items: center;
     justify-content: end;
 
-    gap: 1em;
+    gap: 2em;
 }
 .view-project-btn{
     border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4rem;
 
     background: transparent;
 
@@ -288,12 +290,12 @@
 
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 30%;
+    background-size: 60%;
 
     border:none;
 }
 .view-project-btn:hover{
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 .delete-project-button{
     background-image: url('../../icons/delete/delete-white-32.svg');
@@ -327,12 +329,15 @@
     }
     .project-entry-title{
         font-size: 0.8rem;
+        
     }
     .project-entry-description-span{
         border-radius: 10px;
     }
     .project-entry-description{
         font-size: 0.8rem;
+        padding-left: 1em;
+        
         
     }
     .project-entry-add-btn{
@@ -385,5 +390,8 @@
         justify-content: end;
     
         gap: 0.5em;
+    }
+    .view-project-btn{
+        background-size: 40%;
     }
   }
