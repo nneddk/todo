@@ -14,7 +14,7 @@
     border:none;
     background-color: lightgray;
     color:black;
-    font-size: 1.6rem;
+    font-size: 1rem;
     font-family: 'Fredoka One', cursive;
     transition: all 0.3s;
 
@@ -37,9 +37,8 @@
     padding: 1.6em;
 
     row-gap: 1.6em;
-    border-radius: 2.5em;
+    border-radius: 25px;
 
-    align-items: center;
     justify-self: center;
 }
 
@@ -48,30 +47,32 @@
     justify-content: space-between;
     align-items: center;
 
-    padding-left: 1.6em;
     
-    height: 80%;
+    height: 100%;
 
     border-radius: 9999px;
 
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0 , 0, 0.2);
     transition: all 0.3s;
+
+    
 }
 .project-entry-title-span:hover{
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0 , 0, 0.5);
 }
 
 .project-entry-title{
-    height: 95%;
-    width: 95%;
+    height: 100%;
+    width: 100%;
 
     outline: none;
     background: transparent;
 
     font-family: 'Fredoka One', cursive;
-    font-size: 0.8rem;
-    color:black;
 
+    color: lightgray;
+    font-size: 1.6rem;
+    padding-left: 1em;
     
 
     border:none;
@@ -88,8 +89,8 @@
     font-size: 0.8rem;
     color:lightgray;
 
-
     border:none;
+
     transition: all 0.3s;
 }
 .project-entry-close-btn:hover{
@@ -100,19 +101,17 @@
     display:flex;
     justify-content: space-between;
     align-items: center;    
-    padding-left: 1.6em;    
-    padding-right: 1.6em; 
         
     height: 100%;
 
 
     border-radius: 25px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0 , 0, 0.2);
 
     transition: all 0.3s;
 }
 .project-entry-description-span:hover{
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0 , 0, 0.5);
 }
 .project-entry-description{
     height: 95%;
@@ -123,7 +122,11 @@
 
     font-family: 'Fredoka One', cursive;
     font-size: 0.8rem;
-    color:black;
+
+    color:lightgray;
+    align-items:unset;
+    overflow: auto;
+    padding-left: 2em;
 
     border:none;
     resize: none;
@@ -206,7 +209,7 @@
 .project-tab-title, .view-project-title, .view-project-desc{
     display:flex;
     align-items: center;
-    padding-left: 1em;
+    padding-left: 2em;
     font-size: 0.8rem;
     font-family: 'Fredoka One', cursive;
     color: black;
@@ -221,6 +224,7 @@
     background-position: center;
     background-repeat: no-repeat;
     border:none;
+    align-self: center;
     transition: all 0.3s;
 }
 .project-tab-delete{
@@ -248,13 +252,15 @@
     padding: 1.6em;
 
     row-gap: 1.6em;
-    border-radius: 2.5em;
+    border-radius: 25px;
 
     justify-self: center;
 }
 .view-project-title{
+    height: 100%;
     color: white;
     font-size: 1.6rem;
+    padding-left: 1em;
 }
 .view-project-desc{
     color:white;
@@ -347,13 +353,12 @@
     }
     .project-tab-title, .view-project-title, .view-project-desc{
         display:flex;
-        height: 1.5rem;
+        height: 100%;
         text-overflow: ellipsis;
         align-items: center;
         padding-left: 1em;
         font-size: 0.6rem;
         font-family: 'Fredoka One', cursive;
-        color: black;
         transition: all 0.3s;
     }
 
@@ -366,6 +371,7 @@
     .view-project-title{
         color: white;
         font-size: 0.8rem;
+        
     }
     .view-project-desc{
         color:white;
