@@ -265,9 +265,6 @@ function viewProject(index){
 function deleteProject(index){
     const addedProjects = document.querySelector('.projects-list');
     if(index!= null){
-        if(projectArray[index].pinned){
-            pinProject(index);
-        }
         projectArray.splice(index, 1);
         localStorage.setItem('data',JSON.stringify(projectArray));
         while(addedProjects.hasChildNodes()){
@@ -275,6 +272,7 @@ function deleteProject(index){
         }
 
         let v = 0;
+        i = 0;
         projectArray.forEach(element => {
         addedProjects.appendChild(addProjectTab(element.title, v));
         v++;
