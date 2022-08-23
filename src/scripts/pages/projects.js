@@ -265,9 +265,11 @@ function viewProject(index){
 function deleteProject(index){
     const addedProjects = document.querySelector('.projects-list');
     if(index!= null){
+        if(projectArray[index].pinned){
+            pinProject(index);
+        }
         projectArray.splice(index, 1);
         localStorage.setItem('data',JSON.stringify(projectArray));
-
         while(addedProjects.hasChildNodes()){
             addedProjects.removeChild(addedProjects.lastChild);
         }
