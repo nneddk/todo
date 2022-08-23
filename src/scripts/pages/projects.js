@@ -124,11 +124,11 @@ function newProject(index, title, desc){
         projectEntryEditBtn.textContent = 'edit project';
 
         projectEntryEditBtn.onclick = function(){
-            const currTab = document.querySelector('.project-tab-title');
-            currTab.textContent = document.querySelector('.project-entry-title').value;
+            const currTab = document.querySelectorAll('.project-tab-title');
+            currTab[index].textContent = document.querySelector('.project-entry-title').value;
             projectArray[index].title = document.querySelector('.project-entry-title').value;
             projectArray[index].description = document.querySelector('.project-entry-description').value;
-
+            localStorage.setItem('data',JSON.stringify(projectArray));
             projectWrapper.style.zIndex = '-1';
         }
         projectEntry.appendChild(projectEntryEditBtn);

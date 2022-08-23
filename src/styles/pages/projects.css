@@ -6,8 +6,8 @@
     grid-template-columns: 1fr 16fr;;
 }
 .add-project-btn{
-    height: 3rem;
-    width: 3rem;
+    height: 4rem;
+    width: 4rem;
     justify-self: center;
     
     border-radius: 50%;
@@ -167,7 +167,7 @@
 
 .project-tab{
     width: 90%;
-    height: 3rem;
+    height: 4rem;
     border-radius: 9999px;
 
     display: grid;
