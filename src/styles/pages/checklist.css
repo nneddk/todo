@@ -215,7 +215,14 @@
     .new-checklist-add{
         background-color: transparent;
         color:orange;
-        font-family: 'Fredoka One', cursive;
+    }
+
+    .new-checklist-add:hover{
+        color:black;
+        background-color: transparent;
+    }
+    .new-checklist-level:hover{
+        transform: scale(1.0);
     }
     .pinned{
         width: 100%;

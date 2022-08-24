@@ -124,11 +124,9 @@ function submitChecklist(title, id){
     let currIndex = checklistArray.length;
     checklistArray.push(new checklistForm(title, id, false, false));
     localStorage.setItem("checklist-data",JSON.stringify(checklistArray));
-    console.log(checklistArray);
 
     const currContent = document.querySelector('.checklist-list');
     currContent.appendChild(addChecklist(title, currIndex));
-    console.log(currContent);
 }
 
 function addChecklist(title, currIndex){

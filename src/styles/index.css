@@ -124,15 +124,8 @@ body{
 .tab-check:hover, .tab-checked> .tab-check:hover{
     transform: scale(1.1);
 }
-.delete-button{
-    background-image: url(../icons/delete/delete-white-32.svg);
-}
-.edit-button{
-    background-image: url(../icons/edit/edit-white-32.svg);
-}
-.pin-button{
-    background-image: url(../icons/pin/pin-white-32.svg);
-}
+
+
 ::-webkit-scrollbar {
     width: 1em;
   }

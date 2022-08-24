@@ -9,12 +9,6 @@ class noteForm{
     }
 }
 
-
-//debug purposes, to fill arrays 
-
-
-localStorage.setItem("note-data",JSON.stringify(noteArray));
-
 export default function notes(){
 
     const notes = document.createElement('div');
@@ -118,7 +112,8 @@ function newNote(index, title, desc){
         noteEntryEditBtn.textContent = 'edit note';
 
         noteEntryEditBtn.onclick = function(){
-            const currTab = document.querySelectorAll('.note-tab-title');
+            const currTab = document.querySelectorAll('.tab-title');
+
             currTab[index].textContent = document.querySelector('.note-entry-title').value;
             noteArray[index].title = document.querySelector('.note-entry-title').value;
             noteArray[index].description = document.querySelector('.note-entry-description').value;
@@ -218,7 +213,7 @@ function viewNote(index){
 
     const editNoteButton = document.createElement('button');
     editNoteButton.setAttribute('type', 'button');
-    editNoteButton.classList.add('edit-btn');
+    editNoteButton.classList.add('edit-button');
     editNoteButton.classList.add('view-note-btn');
     editNoteButton.onclick = function(){
         editNote(index, title, desc);
@@ -231,7 +226,7 @@ function viewNote(index){
     pinNoteButton.classList.add('pin-button');
     pinNoteButton.classList.add('view-note-btn');
     pinNoteButton.onclick = function(){
-        pinnote(index);
+        pinNote(index);
         noteWrapper.style.zIndex = '-1';
         
     }
