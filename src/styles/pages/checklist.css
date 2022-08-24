@@ -1,0 +1,223 @@
+.checklist-div{
+    margin: 1rem;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr 16fr;
+}
+.add-checklist-btn{
+    height: 4rem;
+    width: 4rem;
+    justify-self: center;
+    
+    border-radius: 50%;
+    border:none;
+    background-color: lightgray;
+    color:black;
+    font-size: 1rem;
+    font-family: 'Fredoka One', cursive;
+    transition: all 0.3s;
+
+    padding: 0px;
+}
+
+.add-checklist-btn:hover{
+    background-color: orange;
+    color:lightgrey;
+}
+.add-checklist-div{
+    padding-left: 1em;
+    padding-right: 1em;
+
+    height: 0;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+.new-checklist{
+    padding-left: 2em;
+    margin-bottom: 2em;
+    width: 90%;
+    gap: 1em;
+}
+.new-checklist-title{
+    display:flex;
+    align-items: center;
+    font-size: 1rem;
+    font-family: 'Fredoka One', cursive;
+    color: black;
+    transition: all 0.3s;
+    border: none;
+    outline: none;
+}
+.new-checklist-level, .new-checklist-add{
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    background-color: lightgrey;
+    border:none;
+    align-self: center;
+    justify-self: center;
+    transition: all 0.3s;
+}
+.new-checklist-add{
+    color:white;
+    background-color: orange;
+    font-family: 'Fredoka One', cursive;
+}
+
+.new-checklist-add:hover{
+    background-color: white;
+    color:black;
+}
+.new-checklist-level:hover{
+    transform: scale(1.1);
+}
+
+.checklist-list{
+    padding-left: 1em;
+    padding-right: 1em;
+    height: 100%;
+    overflow: auto;
+}
+.checklist-list-holder{
+    height: 100%;
+    overflow:hidden
+}
+.new-checklist{
+    height: 100%;
+    border-radius: 9999px;
+    background-color: rgb(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: 10fr 1fr 1fr;
+}
+.new-checklist-title{
+    background-color: transparent;
+    padding: 1em;
+}
+
+.checklist-tab{
+    height: 4rem;
+    border-radius: 9999px;
+    width: 90%;
+    display: grid;
+    grid-template-columns:  1fr 10fr 1fr 1fr;
+    margin-bottom: 10px;
+    
+    align-self: center;
+    justify-self: center;
+    transition: all 0.3s;
+}
+
+.checklist-tab.light:hover{
+    background-color: rgb(161, 161, 161);
+}
+.checklist-tab.medium:hover{
+    background-color: rgb(205, 115, 0);
+}
+.checklist-tab.heavy:hover{
+    background-color: rgb(78, 0, 78);
+}
+
+.pinned{
+    position:sticky;
+    bottom: 0;
+    width: 80%;
+    transition: all 0.3s;
+    background-image: linear-gradient(to right, orange, purple);
+}
+
+.checked{
+    text-decoration: line-through;
+    color:rgb(0, 0, 0, 0.2);
+}
+
+
+.tab-checked.light{
+    background-color: rgb(211, 211, 211, 0.2);
+}
+.tab-checked.light:hover{
+    background-color: rgb(211, 211, 211, 0.5);
+}
+
+.tab-checked.medium{
+    background-color: rgb(255, 165, 0, 0.2);
+}
+.tab-checked.medium:hover{
+    background-color: rgb(255, 165, 0, 0.5);
+}
+.tab-checked.heavy{
+    background-color: rgb(128, 0, 128, 0.2);
+}
+.tab-checked.heavy:hover{
+    background-color: rgb(128, 0, 128, 0.5);
+}
+
+.light{
+    background-color: lightgray;
+}
+.medium{
+    background-color: orange;
+}
+.medium>.tab-title{
+    color:white;
+}
+.heavy{
+    background-color: purple;
+}
+.heavy>.tab-title{
+    color:white;
+}
+
+.tab-checked>.tab-title{
+    color:rgb(0, 0, 0, 0.2);
+}
+
+.add-checklist-open{
+    height: 4rem;
+    margin-bottom: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+    .add-checklist-btn{
+        height: 2rem;
+        width: 2rem;
+        font-size: 1rem;
+        padding: 0px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .checklist-list{
+        height: 100%;
+        overflow: auto;
+    }
+    .checklist-tab{
+        height: 2rem;
+    }
+    .new-checklist{
+        height: 2rem;
+    }
+    .new-checklist-title{
+        font-size: 0.6rem;
+    }
+    .add-checklist-open{
+        height: 2rem;
+        margin-bottom: 0.6em;
+    }
+    .new-checklist-level, .new-checklist-add{
+        width: 1.6rem;
+        height: 1.6rem;
+        border-radius: 50%;
+        background-color: lightgrey;
+        border:none;
+        align-self: center;
+        justify-self: center;
+        transition: all 0.3s;
+    }
+    .new-checklist-add{
+        background-color: transparent;
+        color:orange;
+        font-family: 'Fredoka One', cursive;
+    }
+    .pinned{
+        width: 100%;
+    }
+}
