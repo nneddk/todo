@@ -3,8 +3,8 @@ a small to-do app
 
 # currently doing:
 
-projects
+notes
 
-# notes
+# 
 
 i hate debugging webpacks
