@@ -71,7 +71,7 @@ function sidebar(){
     notesBtn.classList.add('anim');
 
     
-    btnChanger(projectsBtn);
+    btnChanger(checklistBtn);
     //button function
     projectsBtn.onclick = function(){
         main(projects());
@@ -101,14 +101,12 @@ function sidebar(){
         btn.style.backgroundColor = 'lightgrey';
         
     }
-
-    sidebar.appendChild(projectsBtn);
+    
     sidebar.appendChild(checklistBtn);
     sidebar.appendChild(notesBtn);
+    sidebar.appendChild(projectsBtn);
 
     return sidebar;
-
-
 }
 
 function main(child){
@@ -132,4 +130,4 @@ document.body.appendChild(wrapper());
 document.body.appendChild(content());
 document.body.appendChild(footer());
 
-main(projects());
+main(checklist());
