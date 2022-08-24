@@ -1,0 +1,344 @@
+
+.notes-div{
+    margin: 1rem;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr 16fr;;
+}
+.add-note-btn{
+    height: 4rem;
+    width: 4rem;
+    justify-self: center;
+    
+    border-radius: 50%;
+    border:none;
+    background-color: lightgray;
+    color:black;
+    font-size: 1rem;
+    font-family: 'Fredoka One', cursive;
+    transition: all 0.3s;
+
+    padding: 0px;
+}
+
+.add-note-btn:hover{
+    background-color: orange;
+    color:lightgrey;
+}
+
+.note-entry-div{
+    width: 80vmin;
+    height: 80vmin;
+    background-image: linear-gradient(orange, purple);
+    display: grid;
+    grid-template-columns: 10fr 0.5fr;
+    grid-template-rows: 1fr 10fr 1.5fr;
+
+    padding: 1.6em;
+
+    row-gap: 1.6em;
+    border-radius: 25px;
+
+    justify-self: center;
+}
+
+.note-entry-title-span{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+    
+    height: 100%;
+
+    border-radius: 9999px;
+
+    background: rgba(0, 0 , 0, 0.2);
+
+    transition: all 0.3s;
+    
+}
+.note-entry-title-span:hover{
+    box-shadow: 0.6em 0.6em black;
+}
+
+.note-entry-title{
+    height: 100%;
+    width: 100%;
+
+    outline: none;
+    background: transparent;
+
+    font-family: 'Fredoka One', cursive;
+
+    color: lightgray;
+    font-size: 1.6rem;
+    padding-left: 1em;
+    
+
+    border:none;
+
+}
+.note-entry-close-btn{
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+
+    background: transparent;
+
+    font-family: 'Fredoka One', cursive;
+    font-size: 0.8rem;
+    color:lightgray;
+
+    border:none;
+
+    transition: all 0.3s;
+}
+.note-entry-close-btn:hover{
+    color: black;
+}
+
+.note-entry-description-span{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;    
+        
+    height: 100%;
+
+
+    border-radius: 25px;
+    background: rgba(0, 0 , 0, 0.2);
+
+    transition: all 0.3s;
+}
+.note-entry-description-span:hover{
+    box-shadow: 0.6em 0.6em black;
+}
+.note-entry-description{
+    height: 95%;
+    width: 95%;
+
+    outline: none;
+    background: transparent;
+
+    font-family: 'Fredoka One', cursive;
+    font-size: 1rem;
+
+    color:lightgray;
+    align-items:unset;
+    overflow: auto;
+    padding-left: 2em;
+
+    border:none;
+    resize: none;
+}
+
+.note-entry-add-btn{
+    width: 30%;
+    height: 4rem;
+
+
+    align-self: center;
+    justify-self: end;
+
+    border-radius: 9999px;
+    border: none;
+    
+    font-family: 'Fredoka One', cursive;
+    background: orange;
+    color:lightgray;
+
+    font-size: 0.8rem;
+    text-align: center;
+
+    transition: all 0.3s;
+}
+
+.note-entry-add-btn:hover {
+    background-color: lightgray;
+    color: black;
+}
+
+.notes-list{
+    padding-left: 1em;
+    padding-right: 1em;
+    height: 100%;
+    overflow: auto;
+}
+
+.note-tab{
+    width: 90%;
+    height: 4rem;
+    border-radius: 9999px;
+
+    display: grid;
+    grid-template-columns: 10fr 1fr 1fr;
+    margin-bottom: 10px;
+    transition: all 0.3s;
+
+    align-self: center;
+    justify-self: center;
+}
+.note-tab:hover{
+    background-color: rgb(0, 0, 0, 0.2);
+}
+.pinned{
+    position:sticky;
+    bottom: 0;
+    width: 80%;
+    transition: all 0.3s;
+    background-image: linear-gradient(to right, orange, purple);
+}
+
+
+.view-note-title, .view-note-desc{
+    display:flex;
+    align-items: center;
+    padding-left: 2em;
+    font-size: 1rem;
+    font-family: 'Fredoka One', cursive;
+    color: black;
+
+    transition: all 0.3s;
+}
+.view-note-div{
+    width: 80vmin;
+    height: 80vmin;
+    background-image: linear-gradient(orange, purple);
+    display: grid;
+    grid-template-columns: 10fr 0.5fr;
+    grid-template-rows: 1fr 10fr 1.5fr;
+
+    padding: 1.6em;
+
+    row-gap: 1.6em;
+    border-radius: 25px;
+
+    justify-self: center;
+}
+.view-note-title{
+    height: 100%;
+    color: white;
+    font-size: 1.6rem;
+    padding-left: 1em;
+}
+.view-note-desc{
+    color:white;
+    align-items:unset;
+    overflow: auto;
+    padding-left: 2em;
+}
+.view-note-button-holder{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    gap: 2em;
+}
+.view-note-btn{
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+
+    background: transparent;
+
+    font-family: 'Fredoka One', cursive;
+    color:lightgray;
+    transition: all 0.3s;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+
+    border:none;
+}
+.view-note-btn:hover{
+    transform: scale(1.2);
+}
+
+@media only screen and (max-width: 600px) {
+    .add-note-btn{
+        height: 2rem;
+        width: 2rem;
+        font-size: 1rem;
+        padding: 0px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .note-entry-div{
+        padding: 1em;
+    }
+    .note-entry-close-btn{
+        height: 2rem;
+        width: 2rem;
+        font-size: 1rem;
+        color: lightgray;
+        padding: 0px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .note-entry-title{
+        font-size: 0.8rem;
+        
+    }
+    .note-entry-description-span{
+        border-radius: 10px;
+    }
+    .note-entry-description{
+        font-size: 0.6rem;
+        padding-left: 1em;
+        
+        
+    }
+    .note-entry-add-btn{
+
+        background-color: lightgray;
+        color: black;
+        height: 90%;
+        width: 36%;
+        font-size: 0.4rem;
+    }
+    
+    .notes-list{
+        height: 100%;
+        overflow: auto;
+    }
+    .note-tab{
+        height: 2rem;
+        
+    }
+    .pinned{
+        width: 90%;
+    }
+    .view-note-title, .view-note-desc{
+        display:flex;
+        height: 100%;
+        text-overflow: ellipsis;
+        align-items: center;
+        padding-left: 1em;
+        font-size: 0.6rem;
+        font-family: 'Fredoka One', cursive;
+        transition: all 0.3s;
+    }
+
+    .view-note-title{
+        color: white;
+        font-size: 0.8rem;
+        
+    }
+    .view-note-desc{
+        color:white;
+        align-items:unset;
+        overflow: auto;
+        padding-left: 1em;
+    }
+    .view-note-button-holder{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    
+        gap: 0.5em;
+    }
+    .view-note-btn{
+        background-size: 40%;
+    }
+  }
