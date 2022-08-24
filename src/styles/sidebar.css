@@ -21,6 +21,7 @@
     background-position: center;
     background-repeat: no-repeat;
 
+    background-size: 30%;
     transition: all 0.3s;
     background-color: transparent;
 }
@@ -41,7 +42,6 @@
 
 #projects-btn{
     background-image: url(../icons/projects/projects-black-64.svg);
-    background-size: 30%;
 }
 
 #projects-btn:hover{
@@ -50,17 +50,15 @@
 
 #checklist-btn{
     background-image: url(../icons/checklist/checklist-black-64.svg);
-    background-size: 30%;
 }
 
 #checklist-btn:hover{
     background-image: url(../icons/checklist/checklist-black-64.svg);
-    background-size: 30%;
+    
 }
 
 #notes-btn{
     background-image: url(../icons/notes/notes-black-64.svg);
-    background-size: 30%;
 
 }
 #notes-btn:hover{
@@ -80,17 +78,6 @@
         border-bottom-left-radius: 0;
         height: 100%;
         width: 4rem;
-    }
-    #projects-btn{
-      background-size: 30%;
-    }
-    
-    #checklist-btn{
-      background-size: 30%;
-    }
-    
-    #notes-btn{
-      background-size: 30%;
     }
   }
 

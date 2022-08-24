@@ -58,11 +58,121 @@ body{
     align-items: center;
     z-index: -1;
 }
+.tab-delete, .tab-pin, .tab-check{
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    border:none;
+    align-self: center;
+    justify-self: center;
+    transition: all 0.3s;
+    background-size: 60%;
+}
+.tab-title{
+    display:flex;
+    align-items: center;
+    padding-left: 2em;
+    font-size: 1rem;
+    font-family: 'Fredoka One', cursive;
+    color: black;
+
+    transition: all 0.3s;
+}
+.pinned> .tab-title{
+    color:white;
+}
+.pinned> .tab-delete, .medium> .tab-delete, .heavy> .tab-delete{
+    background-image: url(../icons/delete/delete-white-32.svg);
+}
+.pinned> .tab-delete:hover, .medium> .tab-delete:hover, .heavy> .tab-delete:hover{
+    transform: scale(1.1);
+}
+
+.pinned> .tab-pin, .medium> .tab-pin, .heavy> .tab-pin{
+    background-image: url(../icons/pin/pin-white-32.svg);
+}
+.pinned> .tab-pin:hover, .medium> .tab-pin:hover, .heavy> .tab-pin:hover{
+    transform: scale(1.1);
+}
+.pinned> .tab-check, .medium> .tab-check, .heavy>.tab-check{
+    background-image: url(../icons/check/uncheck-white-32.svg);
+}
+.tab-delete, .tab-checked> .tab-delete{
+    background-image: url(../icons/delete/delete-black-32.svg);
+
+}
+.tab-delete:hover, .tab-checked> .tab-delete:hover{
+    transform: scale(1.1);  
+}
+.tab-pin, .tab-checked> .tab-pin{
+    background-image: url(../icons/pin/pin-black-32.svg);
+
+}
+.tab-pin:hover, .tab-checked> .tab-pin:hover{
+    transform: scale(1.1);
+
+}
+.tab-checked>.tab-check{
+    background-image: url(../icons/check/check-black-32.svg);
+}
+.tab-check{
+    background-image: url(../icons/check/uncheck-black-32.svg);
+}
+.tab-check:hover, .tab-checked> .tab-check:hover{
+    transform: scale(1.1);
+}
+.delete-button{
+    background-image: url(../icons/delete/delete-white-32.svg);
+}
+.edit-button{
+    background-image: url(../icons/edit/edit-white-32.svg);
+}
+.pin-button{
+    background-image: url(../icons/pin/pin-white-32.svg);
+}
+::-webkit-scrollbar {
+    width: 1em;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+  }
 
 @media only screen and (max-width: 600px) {
 
     .content {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 10fr;
+    }
+    .tab-title{
+        display:flex;
+        height: 100%;
+        text-overflow: ellipsis;
+        align-items: center;
+        padding-left: 1em;
+        font-size: 0.6rem;
+        font-family: 'Fredoka One', cursive;
+        transition: all 0.3s;
+
+        overflow: auto;
+    }
+    .tab-delete, .tab-pin, .tab-check{
+        width: 2rem;
+        height: 2rem;
+        background-size: 50%;
     }
   }
